@@ -1,0 +1,13 @@
+ion-icon {
+    display: flexbox;
+    justify-items: center;
+}
+
+#cut {
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
+}
+
+.h2{
+    margin-top: 50vh;
+}

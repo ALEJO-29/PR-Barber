@@ -1,0 +1,56 @@
+{% load static %}
+
+{% load bootstrap5 %}
+
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %} ">
+    <title> {% block  title %}{% endblock  %} </title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark p-1 fixed-top" style="background-color: rgb(21, 21, 21, 0.9);">
+        <a class="navbar-brand" href=" {% url 'index' %} "><img src="{% static 'img/logo.png' %} " alt="" width="90px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button> 
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 mx-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'index' %} " aria-current="page">Inicio <span class="visually-hidden ">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" {% url 'servicios' %} ">servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <div class="float-end  mx-3">
+                        {% if user.is_authenticated %}          
+                            <span class="text-white p-2">Bienvenido {{user.username}} a Baber Harry</span>
+                            <a name="" id="" class="btn btn-warning" href="{% url 'cerrar_sesion'%}" role="button">Cerrar sesion</a>            
+                        {% else %}
+                            <a class="btn btn-warning" href="{% url 'login'%}" role="button">Iniciar sesion</a>
+                            <a  class="btn btn-warning" href="{% url 'singup'%}" role="button">Registrarse</a>    
+                        {% endif %}
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+    {% block  content  %} {% endblock  %}
+
+<footer class="p-4 container-expand bg-dark text-center mt-5 text-white">
+    <h6>&copy; 2022 Aprendices ADSI Sena</h6>
+</footer>
+</body>
+</html>

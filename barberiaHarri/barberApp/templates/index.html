@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load bootstrap5 %}
+
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+{% block title %} Inicio {% endblock  %}
+
+{% block  content %}
+    
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel" style="height: 600px; width: 100%;">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner justify-content-center" role="listbox">
+            <div class="carousel-item active">
+                <img src="{% static 'img/R.jpg' %}" class="w-100 d-block" alt="First slide" height="600px" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/estudio.jpg' %}" class="w-100 d-block" alt="Second slide"  width="100%" height="600px">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/cita.jpg' %}" class="w-100 d-block" alt="Third slide"  width="100p%" height="600px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container-expand mt-5 " style="background-color: whitesmoke; display: inline-block;">
+        <div class="row ">
+            <h4 class="text-center"><strong>Nuestros Servicios</strong></h4>
+            <div class="col-sm-6 ">
+                <div class="mx-4 p-3 text-center"  id="cut">
+                    <h5>Corte de cabello </h5><ion-icon name="cut-outline" size="large"></ion-icon>
+                    <p class="w-75 p-2 mx-auto ">
+                        Ofremos servicios de corte de cabello para caballeros, que se adaptan a sus ideas 
+                        o gustos. Ademas, damos asesoria sobre lo ultimo en moda en cortes.
+                    </p>
+                </div>
+                <div class="mx-4 p-3 mt-4 text-center"  id="cut">
+                    <h5>Barba</h5><ion-icon name="eyedrop-outline"  size="large"></ion-icon>
+                    <p class="w-75 p-2 mx-auto">
+                    Tambien manejamos el servicios de Perforaciones; en orejas, labios, cejas, lengua y mas.
+                    Con la mejor experiencia brindada por un profesional
+                    </p>
+            </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="mx-4 p-3 text-center"  id="cut">
+                <h5>Perforaciones</h5><ion-icon name="eyedrop-outline"  size="large"></ion-icon>
+                <p class="w-75 p-2 mx-auto">
+                Tambien manejamos el servicios de Perforaciones; en orejas, labios, cejas, lengua y mas.
+                Con la mejor experiencia brindada por un profesional
+                </p>
+            </div>
+            <div class="mx-4 p-3 mt-4 text-center"  id="cut">
+                <h5>Cejas</h5><ion-icon name="eye-outline" size="large"></ion-icon>
+                <p class="w-75 p-2 mx-auto">
+                Ademas, una excelente calidad en diseño de cejas
+                </p>
+        </div>
+     </div>
+
+<div class="container p-4 mt-4 shadow">
+    <h3 class="text-center"><strong>Nuestro Barbero</strong></h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <div>
+                <img src="{% static 'img/index.jpg' %} " alt="" width="420px" height="600px" class="rounded "  style="opacity: 0.7;">
+            </div>
+        </div>
+        <div class="col-sm-8" style="background-color: rgba(241, 248, 246, 0.9);">
+            <div>
+               <p style="  color: rgb(2, 2, 2,0.7 );">
+                Harriman , barber profesional, con mas de 7 años de experiencia en la industria de las barberias 
+               </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+{% endblock  %}

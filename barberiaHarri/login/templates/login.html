@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load bootstrap5 %}
+
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+{% block title %}
+  login
+{% endblock %}
+
+{% block content %}
+  <div class="container ">
+    <h2 class="h2">Log-in</h2>
+    <div class=" form ">
+      <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

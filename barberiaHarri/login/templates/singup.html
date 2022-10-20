@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static  %}
+{% load bootstrap5 %}
+
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+{% block title %} Registrate {% endblock  %}
+
+{% block content %}
+<div class="text-center  mt-5">
+    <h2  style="margin-top: 120;"> Registrate </h2>
+    <div class=" border mx-auto p-5 shadow-lg bg-dark rounded " style="width: 500px;" > 
+        <form method="post" class="mx-auto w-75 text-warning" style="max-width: 700px;">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" class="btn btn-warning">Registrarse</button>
+        </form>
+     </div>
+</div>
+{% endblock  %}
