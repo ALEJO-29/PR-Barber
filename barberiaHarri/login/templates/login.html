@@ -13,12 +13,12 @@
 {% block content %}
   <div class="container" id="div_form">
     <div class="row">
-      <div class="col-sm-6 bg-dark">
-        <div id="login-font">
-          <img src="{% static 'img/font-login.jpg' %} " alt="">
+      <div class="col-sm-6 bg-dark" id="form" >
+        <div >
+          <img src="{% static 'img/font-login.jpg' %} " alt="" id="login-font">
         </div>
         <div class="col-sm-6">
-          <h3>LOG-IN</h3>
+          <h3 id="text-font"  >LOG-IN</h3>
           <form  method="post">
             {% bootstrap_form form %}
             <button type="submit" class="btn btn-primary">Submit</button>
