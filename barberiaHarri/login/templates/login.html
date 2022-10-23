@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
 
 {% load static %}
 {% load bootstrap5 %}
@@ -6,25 +6,20 @@
 {% bootstrap_javascript %}
 {% bootstrap_css %}
 
-{% block title %}
-  login
-{% endblock %}
+<title>login</title>
 
 {% block content %}
-  <div class="container" id="div_form">
-    <div class="row">
-      <div class="col-sm-6 bg-dark" id="form" >
-        <div >
-          <img src="{% static 'img/font-login.jpg' %} " alt="" id="login-font">
-        </div>
-        <div class="col-sm-6">
-          <h3 id="text-font"  >LOG-IN</h3>
-          <form  method="post">
-            {% bootstrap_form form %}
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
+  <div class="container shadow-lg  mx-2 text-center" style="margin-top: 110px; display:inline-block;height: 400px; width: 350px; ;">
+    <img src=" {% static 'img/logo.png' %} " width="60%" height="120px" class="mb-4">
+      <h3 class="text-uppercase text-center">iniciar sesion</h3>
+       <form  method="post" class="">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-warning">iniciar sesion</button>
+       </form>
+  </div>
+  <div class=" bg-dak d-flex" style="float: right; position: relative ">
+    <h3  class="text-white text-uppercase" style="position: absolute; top: 50vh; left: 115px;" >inicia sesion para que estes mas cerca de nostros</h3>
+    <img src=" {% static 'img/font-login.jpg' %} " width="980px" height="625px">
   </div>
 {% endblock %}

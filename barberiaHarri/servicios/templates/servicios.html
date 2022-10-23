@@ -14,8 +14,8 @@
     <div class="row">
       {% for servicio in servicios %}
         <div class="col-sm-3">
-          <div class="card shadow-lg border" style="height: 550px">
-            <div class="card-body">
+          <div class="card shadow-lg border "  id="card">
+            <div class="card-body" > 
               {% if servicio.imagen %}
                 <img src="{{ servicio.imagen.url }} " height="280px" class="card-image w-100 rounded my-3" alt="img" />
               {% endif %}
@@ -24,7 +24,7 @@
               <p class="card-text">
                 <strong>precio:</strong> ${{ servicio.precio }}
               </p>
-              <a href="#" class="btn btn-danger m-2">Ingresar</a>
+              <a href="{% url 'cita' %} " class="btn btn-danger m-2">Ingresar</a>
             </div>
           </div>
         </div>
