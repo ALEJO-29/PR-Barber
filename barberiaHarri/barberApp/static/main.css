@@ -8,7 +8,10 @@ ion-icon {
     box-shadow: 2px 2px 2px 2px rgb(186, 184, 184);
 }
 
-#login-font{
+#login-font {
     width: 200px;
 }
 
+body{
+    background-image: url(/PR-Barber/barberiaHarri/barberApp/static/img/font-login.jpg);
+}

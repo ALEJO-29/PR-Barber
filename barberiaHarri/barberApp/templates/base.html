@@ -43,7 +43,7 @@
                     <a class="nav-link active" href="{% url 'index' %} " aria-current="page">Inicio <span class="visually-hidden ">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                         
                         <a class="dropdown-item" href="{% url 'cita' %} ">Cita</a>
@@ -54,16 +54,19 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin">Admin</a>
+                    <a class="nav-link text-white" href="/admin">Mas de nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/admin">Admin</a>
                 </li>
                 <li class="nav-item">
                     <div class="float-end  mx-3">
                         {% if user.is_authenticated %}          
                             <span class="text-white p-2">Bienvenido {{user.username}} a Baber Harry</span>
-                            <a name="" id="" class="btn btn-warning" href="{% url 'cerrar_sesion'%}" role="button">Cerrar sesion</a>            
+                            <a class="btn btn-danger" href="{% url 'cerrar_sesion'%}" role="button">Cerrar sesion</a>            
                         {% else %}
-                            <a class="btn btn-warning" href="{% url 'login'%}" role="button">Iniciar sesion</a>
-                            <a  class="btn btn-warning" href="{% url 'singup'%}" role="button">Registrarse</a>    
+                            <a class="btn btn-outline-danger text-white" href="{% url 'login'%}" role="button">Iniciar sesion</a>
+                            {% comment %} <a  class="btn btn-warning" href="{% url 'singup'%}" role="button">Registrarse</a>     {% endcomment %}
                         {% endif %}
                         </div>
                 </li>
