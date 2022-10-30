@@ -1,4 +1,4 @@
-{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% extends 'fondo.html' %}
 
 {% load static %}
 {% load bootstrap5 %}
@@ -8,7 +8,7 @@
 
 <title>login</title>
 
-{% block content %}
+{% block contenido %}
   <div class="container shadow-lg  mx-2 text-center" style="margin-top: 110px; display:inline-block;height: 400px; width: 350px; ;">
     <img src=" {% static 'img/logo.png' %} " width="60%" height="120px" class="mb-4">
       <h3 class="text-uppercase text-center">iniciar sesion</h3>
@@ -17,9 +17,5 @@
         {% bootstrap_form form %}
         <button type="submit" class="btn btn-warning">iniciar sesion</button>
        </form>
-  </div>
-  <div class=" bg-dak d-flex" style="float: right; position: relative ">
-    <h3  class="text-white text-uppercase" style="position: absolute; top: 50vh; left: 115px;" >inicia sesion para que estes mas cerca de nostros</h3>
-    <img src=" {% static 'img/font-login.jpg' %} " width="980px" height="625px">
   </div>
 {% endblock %}
