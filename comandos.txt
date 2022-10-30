@@ -1,0 +1,12 @@
+Comandos de git
+Añadir los cambios => git add .
+realizar el commit => git commit -m "mensaje"
+sincronar los cambios => git push
+actualizar los cambios que hicieron los demas => git push
+
+
+activar el entorno virtual
+nombreCarpeta\Scripts\activate
+
+correr el proyecto
+py manage.py runserver 
