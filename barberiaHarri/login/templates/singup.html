@@ -1,22 +1,22 @@
-{% extends 'base.html' %}
+{% extends 'fondo.html' %}
 
-{% load static  %}
+{% load static %}
 {% load bootstrap5 %}
 
 {% bootstrap_javascript %}
 {% bootstrap_css %}
 
-{% block title %} Registrate {% endblock  %}
+{% block title %} Registrate{% endblock  %}
 
-{% block content %}
-<div class="text-center  mt-5">
-    <h2  style="margin-top: 120;"> Registrate </h2>
-    <div class=" border mx-auto p-5 shadow-lg bg-dark rounded " style="width: 500px;" > 
-        <form method="post" class="mx-auto w-75 text-warning" style="max-width: 700px;">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <button type="submit" class="btn btn-warning">Registrarse</button>
-        </form>
-     </div>
-</div>
-{% endblock  %}
+{% block contenido %}
+  <div class="container text-center w-50 h-100 p-3 rounded text-white" style="margin-top:110px; background-color: rgb(29, 28, 28,0.5)" />
+      <h3 class="text-uppercase text-center text-white mt-3">iniciar sesion</h3>
+       <form  method="post" class="mt-4 w-75 mx-auto p-4">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div class="form-group m-5 ">
+          <button type="submit" class="btn btn-danger">Registrarse</button>    
+        </div>
+       </form>
+  </div>
+{% endblock %}
