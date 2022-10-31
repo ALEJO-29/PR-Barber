@@ -27,3 +27,7 @@ def perforacion(request):
 
 def publicidad(request):
     return render(request, 'publicidad.html')
+
+
+def producto(request):
+    return render(request, 'productos.html')

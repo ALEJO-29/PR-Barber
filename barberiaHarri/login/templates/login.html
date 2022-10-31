@@ -9,13 +9,15 @@
 <title>login</title>
 
 {% block contenido %}
-  <div class="container shadow-lg  mx-2 text-center" style="margin-top: 110px; display:inline-block;height: 400px; width: 350px; ;">
-    <img src=" {% static 'img/logo.png' %} " width="60%" height="120px" class="mb-4">
-      <h3 class="text-uppercase text-center">iniciar sesion</h3>
-       <form  method="post" class="">
+  <div class="container text-center w-50 h-75 p-3 rounded text-white" style="margin-top:110px; background-color: rgb(29, 28, 28,0.5)" />
+      <h3 class="text-uppercase text-center text-white mt-3">iniciar sesion</h3>
+       <form  method="post" class="mt-4 w-75 mx-auto p-4">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <button type="submit" class="btn btn-warning">iniciar sesion</button>
+        <div class="form-group m-5 ">
+          <button type="submit" class="btn btn-danger">Ingresar</button>
+          <a  class="btn btn-danger m-2" href="{% url 'singup'%}" role="button">Registrarse</a>    
+        </div>
        </form>
   </div>
 {% endblock %}
