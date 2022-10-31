@@ -63,6 +63,7 @@ JET_THEMES = [
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
     'jet',
     'django.contrib.admin',
     'django.contrib.auth',
