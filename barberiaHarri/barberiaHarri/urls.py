@@ -20,7 +20,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('jet/', include('jet.urls')),
+    path('jet/', include('jet.urls', 'jet')),
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('admin/', admin.site.urls),
     path('', include('barberApp.urls')),
     path('', include('servicios.urls')),
