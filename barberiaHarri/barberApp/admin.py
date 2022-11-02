@@ -3,6 +3,11 @@ from django.contrib import admin
 from .models import Servicio, Producto, TipoProducto, Cita
 
 # Register your models here.
+
+admin.site.site_header = 'Barber Harry'
+admin.site.index_title = 'Panel de control Barber Harry'
+admin.site.site_title = 'Administrador de la pagina'
+
 admin.site.register(Servicio)
 admin.site.register(Producto)
 admin.site.register(TipoProducto)
