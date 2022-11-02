@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('barberApp.urls')),
     path('', include('servicios.urls')),
     path('', include('login.urls')),
+    path('', include('Nosotros.urls')),
 ]
 
 if settings.DEBUG:
