@@ -16,22 +16,6 @@
     <title> {% block  title %}{% endblock  %} </title>
 </head>
 <body>
-    
-    <style> 
-        .dropdown-menu{
-            background: black;
-            padding: 5px;
-        }
-
-        .dropdown-item{
-            color: white;
-        }
-
-        .dropdown-item:hover{
-            background-color: white;
-            color: black; 
-        }
-    </style> 
     <div class="container-expand">
     <nav class="navbar navbar-expand-sm navbar-dark p-1 fixed-top">
         <a class="navbar-brand" href=" {% url 'index' %} "><img src="{% static 'img/logo.png' %}" alt="" width="90px" style=""></a>
@@ -51,6 +35,7 @@
                         <a class="dropdown-item" href="{% url 'evento' %} ">Evento</a>
                         <a class="dropdown-item" href="{% url 'perforacion' %} ">Perforacion</a>
                         <a class="dropdown-item" href="{% url 'publicidad' %} ">Publicidad</a>
+                        <a class="dropdown-item" href="{% url 'productos' %} ">productos</a>
                     </div>
                 </li>
                 <li class="nav-item">
