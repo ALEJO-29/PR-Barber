@@ -63,8 +63,6 @@ JET_THEMES = [
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',
-    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,6 +73,7 @@ INSTALLED_APPS = [
     'barberApp',
     'login',
     'servicios',
+    'nosotros',
 ]
 
 MIDDLEWARE = [

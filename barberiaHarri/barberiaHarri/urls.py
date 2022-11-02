@@ -20,13 +20,11 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('jet/', include('jet.urls', 'jet')),
-    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('admin/', admin.site.urls),
     path('', include('barberApp.urls')),
     path('', include('servicios.urls')),
     path('', include('login.urls')),
-    path('', include('Nosotros.urls')),
+    path('', include('nosotros.urls')),
 ]
 
 if settings.DEBUG:
