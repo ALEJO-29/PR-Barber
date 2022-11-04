@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from barberApp.models import Servicio
+from .forms import CitaForm
 
 # Create your views here.
 
@@ -10,7 +11,10 @@ def servicios(request):
 
 
 def cita(request):
-    return render(request, 'cita.html')
+    if request.method == "GET":
+        form=CitaForm(request.POST)
+        form=CitaForm()
+    return render(request, 'cita.html', {'form': form})
 
 
 def edicion(request):

@@ -9,4 +9,15 @@
 
 {% block content %}
 
+{% if form.errors  %}
+    <h2>hay error</h2>
+{% endif %}
+
+<div class="container" style="margin-top:120px;">
+    <form method="post" class="form-control">
+        {% csrf_token %}      
+        {% bootstrap_form form %}
+    </form>
+</div>
+
 {% endblock  %}
