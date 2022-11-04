@@ -42,7 +42,17 @@ class Servicio(models.Model):
 
 
 class Cita(models.Model):
+    tipo_corte=(
+        ('corte', 'corte'),
+        ('cejas', 'cejas'),
+        ('barba', 'barba'),
+        ('corte y cejas', 'corte y cejas'),
+        ('corte y barba', 'corte y barba'),
+        ('corte completo', 'corte completo'),
+    )
+    
     fecha = models.DateField()
     hora = models.TimeField()
     descripcion = models.CharField(max_length=150)
+    tipo_corte= models.CharField(max_length=250, choices=tipo_corte, default=True)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
