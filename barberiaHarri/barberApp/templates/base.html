@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="container-expand">
-    <nav class="navbar navbar-expand-sm navbar-dark p-1 fixed-top">
+    <nav id="men" class="navbar navbar-expand-sm navbar-dark p-1 fixed-top">
         <a class="navbar-brand" href=" {% url 'index' %} "><img src="{% static 'img/logo.png' %}" alt="" width="90px" style=""></a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button> 
@@ -63,5 +63,17 @@
 <footer class="p-4 container-expand bg-dark text-center mt-5 text-white">
     <h6>&copy; 2022 Aprendices ADSI Sena</h6> 
 </footer>
+
+
+<script>
+    $(window).scroll(function() {
+        if ($("#men").offset().top > 56) {
+            $("#men").addClass("bg-inverse");
+        } else {
+            $("#men").removeClass("bg-inverse");
+        }
+
+    });
+</script>
 </body>
 </html>
