@@ -11,32 +11,100 @@
 {% block  content  %} 
 
 
-<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-            <img src="holder.js/900x500/auto/#777:#555/text:First slide" class="w-100 d-block" alt="First slide">
+{% comment %} <div id="
+<div class="container-fluid">
+    
+    <img src="{% static 'img/slider2.jpg' %}" class="w-100 d-block h-75" alt="Second slide">
+</div>" >
+
+        
+</div> {% endcomment %}
+
+
+
+<section class="principal">
+    <img src="{% static 'img/slider2.jpg' %}" class="w-100 d-block h-75" alt="Second slide">
+
+</section>
+
+<section class="nosotros">
+
+    <h1 class="text-center my-5 ">Pueblorrico Antioquia</h1>
+    <p>Pueblorrico es un municipio de Colombia, localizado en la subregión Suroeste
+         del departamento de Antioquia. Limita por el norte con los municipios de Salgar
+          y Tarso, por el este con el municipio de Jericó, por el sur con el municipio
+           de Andes y por el oeste con los municipios de Ciudad Bolívar e Hispania</P>
+    
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-3">
+                <h3 class="text-center my-5 ">culumna1</h3>
+                <div class="card" style="width: 15rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="col-3">
+                <h3 class="text-center my-5 ">culumna2</h3>
+                <div class="card" style="width: 15rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="col-3">
+                <h3 class="text-center my-5 ">culumna3</h3>
+                <div class="card" style="width: 15rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                    </div>
+                  </div>
+            </div>
+
+
+            <div class="col-3">
+                <h3 class="text-center my-5 ">culumna4</h3>
+                <div class="card" style="width: 15rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                    </div>
+                  </div>
+            </div>
+
+            
+
         </div>
-        <div class="carousel-item">
-            <img src="holder.js/900x500/auto/#666:#444/text:Second slide" class="w-100 d-block" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img src="holder.js/900x500/auto/#666:#444/text:Third slide" class="w-100 d-block" alt="Third slide">
-        </div>
+
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+
+</section>
+
+<section class="informacion">
+
+    <h1> hola k brones</h1>
+
+</section>
+
+
 
 
 
