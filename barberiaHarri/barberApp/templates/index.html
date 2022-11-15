@@ -15,11 +15,39 @@
         top: 45%; 
         left: 38%; 
         color: white;
-       }  
+        letter-spacing: 2px;
+       } 
+       
+       .zoom{
+        animation: zoomout 2.5s ease-in normal;
+    }
+
+    @keyframes zoomout {
+        0%{
+            transform:scale(1.2);
+        }
+
+    }
+
+    .section-1{
+        background-image: url(../static/img/parallax.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 400px;
+        width:100%;
+        color: white;
+        
+    }
+
+
+
+
 
 </style>
 
-<div>
+
+<div class="zoom">
     <img src="{% static 'img/R.jpg' %}" class="w-100 d-block" alt="" height="600px" width="100%">
     <div class="caption"> 
         <h1 class="text-center"><strong>Barbería Harry</strong></h1>
@@ -27,7 +55,7 @@
 </div>
 
 
-<div class="container-expand mt-4" style="background-color: whitesmoke; display: inline-block;">
+<div class="container-fluid mt-4" style="background-color: whitesmoke; display: inline-block;">
     <div class="row">
         <h4 class="text-center mt-5"><strong>Nuestros Servicios</strong></h4>
         <div class="col-md-3 mt-4">
@@ -40,7 +68,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="mx-3 p-4 mt-4 text-center"  id="cut">
+            <div class="mx-3 p-4 mt-4 text-center" id="cut">
                 <h5>Barba</h5><ion-icon name="cut-outline" size="large"></ion-icon>
                 <p class="w-100 p-3 mx-auto">
                     Servicio especializado en cuidado, corte y perfilación de barba adecuando
@@ -69,19 +97,12 @@
     </div>
 </div>
 
-<div class="container p-4 mt-4 shadow">
-    <h3 class="text-center"><strong>Nuestro Barbero</strong></h3>
+<div class="container-fluid p-4 mt-4 w-100 d-block">
+    
     <div class="row">
-        <div class="col-sm-4">
-            <div>
-                <img src="{% static 'img/index.jpg' %} " alt="" width="420px" height="600px" class="rounded "  style="opacity: 0.7;">
-            </div>
-        </div>
-        <div class="col-sm-8" style="background-color: rgba(241, 248, 246, 0.9);">
-            <div>
-               <p style="  color: rgb(2, 2, 2,0.7 );">
-                Harriman , barber profesional, con mas de 7 años de experiencia en la industria de las barberias 
-               </p>
+        <div class="col-sm-4 w-100">
+            <div class="section-1"> 
+                <h1 class="text-center"><strong>Nuestra Barbería</strong></h1>
             </div>
         </div>
     </div>
