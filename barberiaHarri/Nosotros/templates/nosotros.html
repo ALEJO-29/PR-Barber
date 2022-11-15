@@ -11,40 +11,60 @@
 {% block  content  %} 
 
 
-{% comment %} <div id="
-<div class="container-fluid">
-    
-    <img src="{% static 'img/slider2.jpg' %}" class="w-100 d-block h-75" alt="Second slide">
-</div>" >
 
-        
-</div> {% endcomment %}
-
-
-
-<section class="principal">
-    <img src="{% static 'img/slider2.jpg' %}" class="w-100 d-block h-75" alt="Second slide">
-
-</section>
-
-<section class="nosotros">
+<section class="nosotros" >
 
     <h1 class="text-center my-5 ">Pueblorrico Antioquia</h1>
-    <p>Pueblorrico es un municipio de Colombia, localizado en la subregión Suroeste
-         del departamento de Antioquia. Limita por el norte con los municipios de Salgar
+
+    <div class="container-sm"><p>Pueblorrico es un municipio de Colombia, localizado en la subregión Suroeste
+         del departamento de Antioquia ,esta ubicado a 126 KM de la ciudad de Medellin. Limita por el norte con los municipios de Salgar
           y Tarso, por el este con el municipio de Jericó, por el sur con el municipio
-           de Andes y por el oeste con los municipios de Ciudad Bolívar e Hispania</P>
-    
+           de Andes y por el oeste con los municipios de Ciudad Bolívar e Hispania.  
+          Esta a una altura de 1800 metros sobre el nivel del mar</P>
+    </div>
+
+
+
+    <section class="principal my-5  ">
+      
+      <img src="{% static 'img/slider2.jpg' %}" class="img-fluid" alt="Second slide">
+  
+    </section>
+
+
+
     <div class="container">
+
+
+      <h1 class="text-center my-5 ">Sitios De Interes</h1>
+
+    <div class="container-sm">
+      <p>  </P>
+    </div>
 
         <div class="row">
 
             <div class="col-3">
-                <h3 class="text-center my-5 ">culumna1</h3>
-                <div class="card" style="width: 15rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                <h3 class="text-center my-5">Mural</h3>
+                <div class="card" style="width: 15rem">
+                    <img src="{% static 'img/mural1.png' %}" class="card-img-top" alt="Second slide" width="300px" height="200px">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      
+                      <p class="card-text"> El mural de barranquismo fue creado por el artista Pueblorriqueño Willian Pelaez
+                        para la celebracion de los 100 años como municipio.Esta ubicado a unas tres cuadras del parque principal
+                      </p>
+                      
+                    </div>
+                 </div>
+            </div>
+
+
+            <div class="col-3">
+                <h3 class="text-center my-5 ">sendero El Golgota</h3>
+                <div class="card" style="width: 15rem;">
+                    <img src="{% static 'img/golgota1.jpeg' %}" class="card-img-top" alt="..." width="300px" height="200px">
+                    <div class="card-body">
+                      
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       
                     </div>
@@ -53,12 +73,15 @@
 
 
             <div class="col-3">
-                <h3 class="text-center my-5 ">culumna2</h3>
-                <div class="card" style="width: 15rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                <h3 class="text-center my-5 ">Salto De Los Monos</h3>
+                <div class="card " style="width: 15rem;">
+                    <img src="{% static 'img/saltom.jpg' %}" class="card-img-top" alt="..." width="300px" height="200px">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                      <p class="card-text">Pueblorrico cuenta con una diversas reservas 
+                        naturales a su alrededor los cuales puedes visitar en cualquier epoca del año.
+                        una de las reservas mas conocidas es el salto de los monos que es una cascada escondida entre montañas
+                        </p>
                       
                     </div>
                   </div>
@@ -66,25 +89,13 @@
 
 
             <div class="col-3">
-                <h3 class="text-center my-5 ">culumna3</h3>
+                <h3 class="text-center my-5 ">Templo</h3>
                 <div class="card" style="width: 15rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="{% static 'img/iglesia.jpg' %}" class="card-img-top" alt="..." width="300px" height="200px">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       
-                    </div>
-                  </div>
-            </div>
-
-
-            <div class="col-3">
-                <h3 class="text-center my-5 ">culumna4</h3>
-                <div class="card" style="width: 15rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">El templo religioso san Antonio de padua esta ubicado 
+                        en el parque principal del municipio,construido hace aproximadamente 58 años </p>
                       
                     </div>
                   </div>
@@ -98,11 +109,7 @@
 
 </section>
 
-<section class="informacion">
 
-    
-
-</section>
 
 
 
