@@ -32,15 +32,25 @@
     .section-1{
         background-image: url(../static/img/parallax.jpg);
         background-repeat: no-repeat;
-        background-attachment: fixed;
         background-size: cover;
-        height: 400px;
-        width:100%;
+        background-attachment: fixed;
+        height: 600px;
         color: white;
         
     }
 
+    #head{
+        background: #ede6db;
+        height: 50px;
+        margin-top:-20px;
+        border-radius: 5px;
+        
+      }
 
+      #cen{
+        position: relative; 
+        top: 30%; 
+      }
 
 
 
@@ -55,54 +65,46 @@
 </div>
 
 
-<div class="container-fluid mt-4" style="background-color: whitesmoke; display: inline-block;">
+<div class="container-fluid mt-4" style="display: inline-block;">
     <div class="row">
-        <h4 class="text-center mt-5"><strong>Nuestros Servicios</strong></h4>
-        <div class="col-md-3 mt-4">
-            <div class="mx-3 p-4 text-center" id="cut">
-                <h5>Corte de cabello</h5><ion-icon name="cut-outline" size="large"></ion-icon>
-                <p class="w-100 p-3 mx-auto">
-                    Corte de cabello para caballeros que se adaptan a tu gusto, excelente
-                    asesoria y lo ultimo en tendencia de cortes.
-                </p>
+        <h3 class="text-center my-5"><strong> Servicios</strong></h3>
+        <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 10px">
+            <div id="head" class="card-header text-center"><h5>Corte de Cabello</h5></div>
+            <div class="card-body">
+              <p class="card-text">Corte de cabello para caballeros que se adaptan a tu gusto, excelente asesoria y lo ultimo en tendencia de cortes.</p>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="mx-3 p-4 mt-4 text-center" id="cut">
-                <h5>Barba</h5><ion-icon name="cut-outline" size="large"></ion-icon>
-                <p class="w-100 p-3 mx-auto">
-                    Servicio especializado en cuidado, corte y perfilación de barba adecuando
-                    diseño y forma al rostro del cliente.
-                </p>
+          </div>
+          
+        <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 40px">
+            <div id="head" class="card-header text-center"><h5>Barba</h5></div>
+            <div class="card-body">
+              <p class="card-text">Servicio especializado en cuidado, corte y perfilación de barba adecuando diseño y forma al rostro del cliente.</p>
             </div>
-        </div>
-        <div class="col-md-3 mt-4">
-            <div class="mx-3 p-4 text-center" id="cut">
-                <h5>Perforaciones</h5><ion-icon name="cut-outline" size="large"cut-outline></ion-icon>
-                <p class="w-100 p-3 mx-auto">
-                    Servicio de perforación en orejas, labios, cejas, lengua.
-                    Con la mejor experiencia brindada por un profesional
-                </p>
+          </div>
+
+          <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 65px">
+            <div id="head" class="card-header text-center"><h5>Perforaciones</h5></div>
+            <div class="card-body">
+              <p class="card-text">Servicio de perforación en orejas, labios, cejas, lengua. Con la mejor experiencia brindada por un profesional</p>
             </div>
-        </div>
-        <div class="col-md-3 mt-4">
-            <div class="mx-3 p-4 text-center" id="cut">
-                <h5>Cejas</h5><ion-icon name="cut-outline" size="large"></ion-icon>
-                <p class="w-100 p-3 mx-auto">
-                    Diseño y depilación de cejas dando la forma apropiada de tus ojos y rostro
-                    con el grosor y linea natural de tus cejas.
-                </p>
+          </div>
+
+          <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 90px">
+            <div id="head" class="card-header text-center"><h5>Cejas</h5></div>
+            <div class="card-body">
+              <p class="card-text">Diseño y depilación de cejas dando la forma apropiada de tus ojos y rostro con el grosor y linea natural de tus cejas.</p>
             </div>
-        </div>   
+          </div>
+
+       
     </div>
 </div>
 
-<div class="container-fluid p-4 mt-4 w-100 d-block">
-    
+<div class="container-expand w-100 d-block"> 
     <div class="row">
         <div class="col-sm-4 w-100">
             <div class="section-1"> 
-                <h1 class="text-center"><strong>Nuestra Barbería</strong></h1>
+                <h1  id="cen" class="text-center"><strong>Nuestra Barbería</strong></h1>
             </div>
         </div>
     </div>
