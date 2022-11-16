@@ -29,6 +29,24 @@
 
     }
 
+    .box{
+        position: relative;
+        float: right;
+        width:50%;
+        height: 600px;
+        
+        
+    }
+
+    .box p{
+        position: relative;
+        top: 10%;
+    }
+
+    .section-2{
+        background-color: rgba(0,0,0,0.60);
+    }
+
     .section-1{
         background-image: url(../static/img/parallax.jpg);
         background-repeat: no-repeat;
@@ -50,7 +68,30 @@
       #cen{
         position: relative; 
         top: 30%; 
+        letter-spacing: 3px;
+
       }
+
+      .barber{
+        position: relative;
+        left: 28%;
+        bottom: 40px;
+        background-image: url(../static/img/Harry.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 250px;
+        
+      }
+
+      .fond{
+        position: relative;
+        float: right;
+        background-color: whitesmoke;
+        width: 35%;
+        height: 180px;
+      }
+
 
 
 
@@ -71,14 +112,14 @@
         <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 10px">
             <div id="head" class="card-header text-center"><h5>Corte de Cabello</h5></div>
             <div class="card-body">
-              <p class="card-text">Corte de cabello para caballeros que se adaptan a tu gusto, excelente asesoria y lo ultimo en tendencia de cortes.</p>
+              <p class="card-text">Corte de cabello para caballeros que se adaptan a tu gusto, excelente asesoria y lo ultimo en tendencia de cortes</p>
             </div>
           </div>
           
         <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 40px">
             <div id="head" class="card-header text-center"><h5>Barba</h5></div>
             <div class="card-body">
-              <p class="card-text">Servicio especializado en cuidado, corte y perfilación de barba adecuando diseño y forma al rostro del cliente.</p>
+              <p class="card-text">Servicio especializado en cuidado, corte y perfilación de barba adecuando diseño y forma al rostro del cliente</p>
             </div>
           </div>
 
@@ -92,7 +133,7 @@
           <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; left: 90px">
             <div id="head" class="card-header text-center"><h5>Cejas</h5></div>
             <div class="card-body">
-              <p class="card-text">Diseño y depilación de cejas dando la forma apropiada de tus ojos y rostro con el grosor y linea natural de tus cejas.</p>
+              <p class="card-text">Diseño y depilación de cejas dando la forma apropiada de tus ojos y rostro con el grosor y linea natural de tus cejas</p>
             </div>
           </div>
 
@@ -100,15 +141,55 @@
     </div>
 </div>
 
-<div class="container-expand w-100 d-block"> 
+<div class="container-fluid p-4 mt-4 w-100 d-block"> 
     <div class="row">
         <div class="col-sm-4 w-100">
             <div class="section-1"> 
+                <div class="section-2 box p-5"> 
+                    <h3 class="text-center"><strong>Bienvenido</strong></h3>
+                    <p class="text-left">En Barbería Harry reflejamos lo que tu quieres ser hoy, 
+                        somos un espacio moderno, ofrecemos a nuestros clientes una imagen actual y el estilo que mejor refleja 
+                        su personalidad, un espacio donde el cliente que nos visita vive una experiencia de bienestar, 
+                        todo esto con técnicas y tratamientos profesionales realzando el estilo personal del cliente.
+                    </p>
+
+                    <p class="text-left">
+                        Asesoramos tus ideas, las adaptamos a tus gustos y preferencias dejando plasmado el estilo y esencia de
+                        nuestra barbería.
+                    </p>
+                       
+
+                    <p class="text-left">
+                        Enfocados en prestar servicios de alta calidad creando experiencias placenteras, la profesionalidad,
+                        cortesía y gratitud con cada uno de nuestros clientes son nuestras principales virtudes.
+                    </p>
+                       
+                   
+                </div>
                 <h1  id="cen" class="text-center"><strong>Nuestra Barbería</strong></h1>
+
             </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid p-4 mt-4 w-100 d-block" style="display: inline-block;">
+    <div class="row">
+        <div class="col-sm-4 w-100">
+            <h3 class="text-center my-5"><strong>Nuestro Barbero</strong></h3>
+            <div class="fond">
+
+                <div class="barber"></div>    
+                
+            </div>
+            <h6 class="text-left">Harriman, barbero profesional con 8 años de experiencia</h6>
         </div>
     </div>
 </div>
+
+
+
 
  
 
