@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from barberApp.models import Servicio
+from barberApp.models import Producto
 from .forms import CitaForm
 
 # Create your views here.
@@ -11,9 +12,10 @@ def servicios(request):
 
 
 def cita(request):
-    if request.method == "GET":
-        form=CitaForm(request.POST)
-        form=CitaForm()
+    form= CitaForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponse('Reservado con exito')
     return render(request, 'cita.html', {'form': form})
 
 
@@ -34,4 +36,5 @@ def publicidad(request):
 
 
 def producto(request):
-    return render(request, 'productos.html')
+    producto = Producto.objects.all()
+    return render(request, 'productos.html',{"producto":producto})

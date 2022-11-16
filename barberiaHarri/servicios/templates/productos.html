@@ -1,15 +1,41 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% load bootstrap5 %}
 
 {% bootstrap_javascript %}
 {% bootstrap_css %}
 
-{% block tittle %} Productos {% endblock%}
+{% block tittle %}
+  Productos
+{% endblock %}
 
-{% block content %} 
-<body class="bg-dark">
-    
-</body>
+{% block content %}
+
+<style>
+    body{
+      background-image: url({% static 'img/fondo-productos.jpg' %});
+      background-size: cover;
+    }
+    .cuerpo{
+      margin-top: 100
+    }
+</style>
+
+<div class="container">
+  <h2 class="text-white text-center">Productos disponibles</h2>
+  <div class="row">
+      {% for productos in producto %}
+      <div class="card m-3 bg-secondary rounded-3" style="width: 18rem;">
+        <img height="200" src="{{ productos.imagen.url }}" class="card-img-top rounded " alt="{{ productos.nombre }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ productos.nombre }}</h5>
+          <p class="card-text">{{ productos.descripcion }}</p>
+          <a href="#" class="btn bg-info">Comprar</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 
 {% endblock %}
