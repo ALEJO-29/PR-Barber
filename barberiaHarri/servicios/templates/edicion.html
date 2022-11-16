@@ -9,11 +9,9 @@
 {% block tittle %} Edición {% endblock %}
 
 {% block content %}
-<style>
-    body{
-        background-color: gray;
-    }
-</style>
+
+<body class="bg-dark">
+    
     <div  id="carouselId" class="carousel slide mx-auto bg-dark" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
@@ -57,6 +55,6 @@
     <a alt="Hablemos por Whatsapp" href="https://wa.me/+573126817064?text=Hola.%20Deseo%20recibir%20informacion%20del%20servicio%20"><img class="fixed-bottom" src="{% static 'img/BOTON WHATSAPP-01.png' %}" width="230" height="85" title="Cotiza tu servicio"></img></a>
     </div>
 
-
+</body>
     
 {% endblock  %}

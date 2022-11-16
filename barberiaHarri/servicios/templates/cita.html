@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load  static %}
 {% load bootstrap5 %}
 
 {% bootstrap_javascript %}
@@ -8,18 +8,62 @@
 {% block title %} Cita {% endblock %}
 
 {% block content %}
+
 <style>
     body{
-        background-color: #211F21;
+        background-color: #F9F7F9;
+    }
+
+
+    .imagen{
+        width: 100%;
+        height: 87%;
+        margin: 0;
+
     }
 </style>
 
-<div class="container " style="margin-top: 120px;">
-    <h3 class="text-white text-center text-uppercase">reserva tu cita</h3>
-    <form action="" method="post" class="form-control w-50 mx-auto">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        <button type="submit" class="btn btn-primary text-center ">enviar</button>
-    </form>
+<div class="bg-primary">
+    <img src="{% static 'img/pexel.webp' %}" alt="" class="imagen">
 </div>
+
+<div class="container-fluid mt-5">
+   <div class="row shadow-lg">
+    <h3 class="text-center text-uppercase">reserva tu cita</h3>
+    <div class="col-sm-6 p-5">
+        <h5 class="text-center">BARBER HARRY</h5>
+        <p class="">Barberia harry esta ubicada en CR 28 #31-43 Pueblorrico antioquia.</p>
+        <p>Nuestros costos :
+            <ul class="text-center p-1">
+                <li class="list-group-item"><strong>Corte de cabello : </strong> $12.000</li>
+                <li class="list-group-item"><strong>Cejas :</strong> $3.000</li>
+                <li class="list-group-item"><strong>Barba</strong> $5.000</li>
+            </ul>
+        </p>
+        <p>Nuestros horarios de atencion:
+            <ul class="text-center p-1">
+                <li class="list-group-item"><strong> lunes: </strong> 9:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> martes : </strong> 9:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> martes : </strong> 9:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> Miercoles : no se presta servicio </strong></li>
+                <li class="list-group-item"><strong> jueves :</strong>  9:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> viernes:</strong>  9:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> sabado:</strong>  8:00 am - 7:00 pm</li>
+                <li class="list-group-item"><strong> domingo:</strong> 8:30 am - 7:00 pm</li>
+            </ul>
+        </p> 
+    </div>
+    <div class="col-md-6 ml-1 p-3 ">
+        <div class="container-fluid border mt-3">
+            <form action="" method="post" class=" mt-5 h-75 w-75 mx-auto">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-danger w-50 d-block mx-auto ">Enviar</button>
+            </form>
+        </div>
+    </div>
+   </div>
+</div>
+
+
 {% endblock  %}
