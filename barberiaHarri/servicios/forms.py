@@ -16,7 +16,3 @@ class CitaForm(forms.ModelForm):
         model = Cita
         fields = ('fecha', 'hora', 'descripcion', 'tipo_corte')
 
-    # fecha = forms.DateTimeField()
-    # hora = forms.TimeField()
-    # descripcion = forms.CharField()
-    # tipo_corte = forms.ChoiceField(tipo_corte)
