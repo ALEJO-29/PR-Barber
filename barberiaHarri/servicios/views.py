@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from barberApp.models import Servicio
+from barberApp.models import Producto
 from .forms import CitaForm
 
 # Create your views here.
@@ -34,4 +35,5 @@ def publicidad(request):
 
 
 def producto(request):
-    return render(request, 'productos.html')
+    producto = Producto.objects.all()
+    return render(request, 'productos.html',{"producto":producto})
