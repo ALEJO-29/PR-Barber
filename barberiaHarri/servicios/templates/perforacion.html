@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% load bootstrap5 %}
+{% bootstrap_javascript %}
+
+
+
+
+
+
+
+{% block  content  %} 
+
+
+
+<style>
+
+
+    
+
+
+</style>
+
+
+<div classs="container-fluid">
+ 
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'img/letreropiercing.webp' %}" class="d-block w-100 mx-auto" alt="..." height="600px">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/nasal2.jpg' %}" class="d-block w-100 mx-auto" alt="..."  height="600px">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/oreja.jpg' %}" class="d-block w-100" alt="..."  height="600px">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container fluid " data-aos="fade-right" >
+
+        <div class="row justify-content-around mx-5 my-5 ">
+           
+            <h4><em> Realizamos todo tipo de perforaciones faciales
+                 y corporales ,cumpliendo con los mas altos estrandares 
+                 de servicio buscando la satisfaccion total del cliente
+                ,gracias a los exelentes resultados obtenidos.</em></h4>
+
+        </div>
+
+    </div>
+
+    <div class="row container-fluid justify-content-around">
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/porejah.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+               
+            </div>
+        
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/pnariz.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+                
+            </div>
+
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/pnariz2.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+                
+            </div>
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/poreja3.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+               
+            </div>
+        
+        </div>
+
+    </div>
+
+    <div class="row container-fluid justify-content-around my-3">
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/plabio1.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+               
+            </div>
+        
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/nasal4.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+                
+            </div>
+           
+
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/plabion.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+                
+            </div>
+        </div>
+
+        <div class="col-md-3 " data-aos="flip-down">
+            <div class="card front" style="width: 18rem;">
+                <img src="{% static 'img/plabio2.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
+               
+            </div>
+
+            <div class="card back">
+                <h3>nombre:</h3>
+
+                <h5>precio </h5>
+
+            </div>
+        
+        </div>
+
+    </div>
+ 
+</div>
+
+
+
+
+
+
+
+
+{% endblock  %}
