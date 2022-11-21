@@ -12,30 +12,73 @@
 {% block content %}
 
 <style>
+
     body{
-      background-image: url({% static 'img/fondo-productos.jpg' %});
-      background-size: cover;
+      background-color: black;
+      margin-top: 100px;
     }
-    .cuerpo{
-      margin-top: 100
+    .box p{
+        position: relative;
+        top: 10%;
     }
+
+    .section-2{
+        background-color: rgba(0,0,0,0.60);
+    }
+
+    .section-1{
+        background-image: url(../static/img/BANER.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 400px;
+        color: white;
+    }
+
+    .col-sm-4{
+      background-color: rgba(0,0,0,0.60);
+    }
+
+    .img-producto{
+      cursor: pointer;
+      width: 100%;
+      transition: all 500ms ease-out;
+      margin: 0;
+      border-radius: 10px;
+    }
+
+    .img-producto:hover{
+      transform: scale(1.1);
+    }
+
 </style>
 
-<div class="container">
-  <h2 class="text-white text-center">Productos disponibles</h2>
+<div class="container-fluid p-4 mt-4 w-100 d-block">
   <div class="row">
-      {% for productos in producto %}
-      <div class="card m-3 bg-secondary rounded-3" style="width: 18rem;">
-        <img height="200" src="{{ productos.imagen.url }}" class="card-img-top rounded " alt="{{ productos.nombre }}" />
+      <div class="col-sm-4 w-100">
+          <div class="section-1">
+              <div class="section-2 box p-5">
+                  <h3 class="text-center"><strong>TENEMOS LOS MEJORES PRODUCTOS PARA TI</strong></h3>
+                  <h6 class="text-center">En la <strong>Barbería Harry</strong> pensamos siempre en nuestros clientes, por eso tenemos los mejores productos para el cuidado de tu cabello o barba</h6>
+          </div>
+      </div>
+  </div>
+  <div class="container m-5">
+    <h4 class="text-white text-center">PRODUCTOS DISPONIBLES</h4>
+    <div class="row">
+        {% for productos in producto %}
+        <div class="card m-3 bg-secondary rounded-3" style="width: 18rem;">
+         <img class="img-producto" height="200" src="{{ productos.imagen.url }}" class="card-img-top rounded " alt="{{ productos.nombre }}" />
         <div class="card-body">
           <h5 class="card-title">{{ productos.nombre }}</h5>
           <p class="card-text">{{ productos.descripcion }}</p>
           <a href="#" class="btn bg-info">Comprar</a>
         </div>
       </div>
-    {% endfor %}
+        {% endfor %}
   </div>
 </div>
-
+  
+</div>
 
 {% endblock %}
