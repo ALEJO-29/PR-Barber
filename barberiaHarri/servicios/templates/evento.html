@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load bootstrap5 %}
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+{% block title %} Evento {% endblock  %}
+
+{% block  content  %} 
+
+<style>
+    .caption{
+    position: absolute; 
+    top: 35%; 
+    left: 10%;
+    color: white;
+    
+    }
+</style>
+
+
+
+<div>
+    
+    <img src="{% static 'img/djharry.jpg' %}" class="w-100 d-block" alt="" height="600px" width="100%">
+
+    <div class="caption">
+        <h1 class="display-4 animate__animated animate__fadeInUp"><strong>La mejor compañia <br> para tus eventos</strong></h1>
+    </div>
+    
+</div>
+
+<div class="container-fluid" data-aos="fade-right" style="">
+ <div class="row justify-content-around">
+  
+    <div class="col-md-4 mx-4 my-5"><h4><em>Queremos hacer tus eventos inolvidables, la música y el color harán parte de tus mejores momentos. </em><h4></div>
+    <div class="col-md-4 my-5"><h4><em>Nuestro servicio es totalmente personalizado para cualquier ocasión, nos adaptamos al lugar y a tu gusto.</em></h4></div>
+  
+ </div>
+</div>
+
+<div class="container-fluid" style="background: whitesmoke">
+    <div class="row text-center">
+        <h4>Card Bodys</h4>
+    </div>
+</div>
+
+<div class="container-fluid" style="background: whitesmoke">
+    <div class="row my-5 mx-3">
+        <div class="col-md-4 text-left">
+            <h4 class="display-4"><strong>Experiencias Inolvidables</strong></h4>
+            <p class="fs-5">Disponemos de equipos de sonido profesionales, iluminación espectacular en compañia de nuestro Dj, experto en entretenimiento.
+                <br>
+                <br>
+                <em>Creamos para ti un ambiente ameno, lleno de diversión a tu estilo</em>
+            </p>
+
+        </div>
+        <div class="col-md-8 my-5">
+            
+            <img src="{% static 'img/event.jpg' %}" id="cut" class="rounded mb-5" alt="" height="260px" width="256px">
+            <img src="{% static 'img/evento2.jpg' %}" id="cut" class="rounded mt-3" alt=""  height="260px" width="256px">
+            <img src="{% static 'img/evento3.jpg' %}" id="cut" class="rounded mt-5 " alt=""  height="260px" width="256px">
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+{% endblock  %}
