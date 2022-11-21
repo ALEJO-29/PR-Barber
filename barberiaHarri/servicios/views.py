@@ -1,7 +1,10 @@
-from django.shortcuts import render, HttpResponse
-from barberApp.models import Servicio
+from django.shortcuts import render, HttpResponse, redirect
+from barberApp.models import Servicio, Cita
 from barberApp.models import Producto
 from .forms import CitaForm
+from django.contrib.auth.models import User
+from datetime import date, timedelta
+from django import forms
 
 # Create your views here.
 
@@ -12,11 +15,20 @@ def servicios(request):
 
 
 def cita(request):
-    form= CitaForm(request.POST or None, request.FILES or None)
+    #mostrat las horas ocupadas en los siguientes 4 dias
+    day = date.today()
+    enday = day+timedelta(days=4)
+    hora = Cita.objects.filter(
+        fecha__range=[day, enday]).order_by('fecha', 'hora')
+    
+    
+    form = CitaForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
-        return HttpResponse('Reservado con exito')
-    return render(request, 'cita.html', {'form': form})
+        return redirect('cita')
+    else:
+        return render(request, 'cita.html', {'form': form, 'hora':hora})
+
 
 
 def edicion(request):
@@ -37,4 +49,4 @@ def publicidad(request):
 
 def producto(request):
     producto = Producto.objects.all()
-    return render(request, 'productos.html',{"producto":producto})
+    return render(request, 'productos.html', {"producto": producto})
