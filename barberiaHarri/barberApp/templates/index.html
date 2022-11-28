@@ -11,8 +11,6 @@
 
 {% block  content %}
 
-
-
 <style>
        .caption { 
         position: absolute; 
@@ -23,12 +21,12 @@
        } 
        
        .zoom{
-        animation: zoomout 2.5s ease-in normal;
+        animation: zoomout 1s ease-in normal;
     }
 
     @keyframes zoomout {
         0%{
-            transform:scale(1.2);
+            transform:scale(1.1);
         }
 
     }
@@ -186,7 +184,7 @@
         <p>En las manos de nuestro profesional en barberia vas poder lograr lucir tu mejor estilo</p>
       </div>
 
-      <div id="cut" class="card col-md-4" data-aos="fade-left" style="width: 19rem; height: 25rem; background: white">
+      <div id="cut" class="card col-md-4" style="width: 19rem; height: 25rem; background: white">
           <img src="{% static 'img/Harry.jpeg' %}" class="card-img-top " style="border-radius: 100%; height: 200px; width: 200px; margin: 0 auto;" alt="...">
         <div class="card-body text-center"><h3>Harriman Barber</h3>
           <p class="card-text p-3">Barbero profesional con más de 8 años de experiencia en cortes de cabello, perfilación de barba y cejas</p>
