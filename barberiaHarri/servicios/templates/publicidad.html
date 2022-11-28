@@ -1,18 +1,76 @@
 {% extends 'base.html' %}
 
+{%  load  static %}
 {% load bootstrap5 %}
 
 {% bootstrap_javascript %}
 {% bootstrap_css %}
 
-{% block tittle %} Publicidad {% endblock%}
+{% block title %} Publicidad {% endblock title %}
 
 {% block content %}
+<style>
+    .cont{
+        position: relative;
+    }
+    .text{
+        position: absolute;
+        top: 40%;
+        left: 90px;
+        color: aliceblue;
+    }
 
-<body class="bg-dark">
+    .container{
+        margin-left: 190px;
+    }
+</style>
 
-    <h1>Hacemos toda clase de publicidad para tu negocio</h1>
-    
-</body>
+<div class=" cont">
+    <img src="{% static 'img/publicidad.jpeg' %}" alt="" width="100%" height="600px" class="d-block">
+    <div class="caption">
+        <h2 class="text  fst-italic text-uppercase animate__animated animate__fadeInUp" >Obten los mejores resultados para tu negocio</h2>
+    </div>
+</div>
+
+<div class="container-fluid p-1 mt-5 text-center" data-aos="fade-right">
+    <p class="fs-3 fst-italic mx-5">Brindamos el mejor servicio de publicidad para todo tipo de negocio o empredimiento,
+        con el fin de que llegues a mas personas.   
+    </p>
+</div>
+
+<div class="container mt-5">
+    <div class="row" data-aos="fade-left">
+        <div class="col-sm-3" >
+            <div class="card shadow" style="width: 18rem;">
+                <img src=" {% static 'img/pendon.jpg' %} " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text fst-italic">Nos ocupamos de realizar pendones perzonalizados segun tu necesidad y gustos</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card shadow mx-5" style="width: 18rem;">
+                <img src=" {% static 'img/tarjeta.jpg' %} " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text fst-italic">Ademas, no encargamos de realizar cartas de presentacion para tu negocio </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card shadow" style="width: 18rem; margin-left: 90px;">
+                <img src=" {% static 'img/m2.png' %} " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text fst-italic">Tambien nos encargamos de realizar marketing a tu negocio en internet, asi aunmenta tu escalabilidad</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div data-aos="fade-right">
+    <a alt="Hablemos por Whatsapp" href="https://wa.me/+573126817064?text=Hola.%20Deseo%20recibir%20informacion%20del%20servicio%20">
+    <img class="mt-4" src="{% static 'img/BOTON WHATSAPP-01.png' %}"
+    width="230" height="85" title="Cotiza tu servicio"></img></a>
+</div>
 
 {% endblock %}
