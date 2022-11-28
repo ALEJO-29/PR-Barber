@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load bootstrap5 %}
+
+{% bootstrap_javascript %}
+{% bootstrap_css %}
+
+{% block title %} Inicio {% endblock  %}
+
+{% block content %}
+<style>
+    body{
+        background-color: #494949  ;
+    }
+</style>
+
+<div class="container-fluid text-white" style="margin-top:140px">
+    <div class="row">
+        <div class="col-sm-6 ">
+            <h5 class="text-center text-uppercase">horarios ocupados durante los siguientes 4 dias</h5>
+            <table class="table mt-5 table-dark table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in filtro %}
+                    <tr>
+                        <th> {{ x.fecha }} </th>
+                        <th> {{ x.hora }}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <h5 class="d-inline mx-5">Descarga el reporte de citas para hoy</h5>
+            <a href=" {% url 'reporteExcel' %}"  class="btn btn-danger " >Reporte de citas hoy </a>
+            {% for x in cita %}
+                {{x.fecha}}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
