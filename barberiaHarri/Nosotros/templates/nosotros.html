@@ -12,25 +12,49 @@
 
 <style>
   body{
-    background-color:#CACACA
+    background-color:
   }
   
- 
+  
+ #efecto{
+  background-image: url(../static/img/efecteishon.jpg);
+  background-size: cover;
+  background-position: center top 25%;
+  background-attachment: fixed;
+ }
+ .enca{
+  background-image: url(../static/img/danza.jpg);
+  background-size: cover;
+  background-position: center top 25%;
+  background-attachment: fixed;
+
+ }
+ .texto{
+  position:absolute;
+  top:45%;
+  left:30%;
+ }
 
 </style>
 
 
 
-<section class="nosotros" >
+<section class="nosotros " >
 
-    <div class="row  container-fluid  p-5">
+   <div class="container-fluid enca h-100">
+
+    <h1 class="text-center texto  text-white display-5"><strong>Municipio Dulce Del <br>Suroeste Antioqueño</strong></h1>
+
+   </div>
+
+    <div class="row container-fluid p-5 ">
 
 
       <div class="col-4 my-5">
 
-        <h1 class="cabecera   text-center p-2  ">Pueblorrico Antioquia</h1>
+        <h1 class="cabecera text-center p-2 " data-aos="fade-right">Pueblorrico Antioquia</h1>
       
-      <p class="text-left my-3">Pueblorrico es un municipio de Colombia, localizado en la subregión Suroeste
+      <p class="text-left my-3 " data-aos="fade-right">Pueblorrico es un municipio de Colombia, localizado en la subregión Suroeste
          del departamento de Antioquia ,esta ubicado a 126 KM de la ciudad de Medellin. Limita por el norte con los municipios de Salgar
           y Tarso, por el este con el municipio de Jericó, por el sur con el municipio
            de Andes y por el oeste con los municipios de Ciudad Bolívar e Hispania.  
@@ -42,7 +66,7 @@
 
         <section class="principal my-5  ">
       
-          <img src="{% static 'img/slider2.jpg' %}" class="img-fluid" alt="Second slide">
+          <img src="{% static 'img/slider2.jpg' %}" class="img-fluid rounded-3" alt="Second slide">
       
         </section>
 
@@ -52,20 +76,20 @@
 
     </div>
 
-    <div class=" row  container-fluid  ">
+    <div class=" row  container-fluid my-4 ">
 
       <div class="col-8">
 
-        <img src="{% static 'img/mula.jpg' %}" class="img-fluid" alt="Second slide">
+        <img src="{% static 'img/mula.jpg' %}" class="img-fluid rounded-3" alt="Second slide">
         
 
       </div>
 
       <div class="col-4">
 
-        <h3 class="cabecera text-center"> Historia</h3>
+        <h3 class="cabecera text-center" data-aos="fade-left"> Historia</h3>
 
-        <p class="text-left my-1">En 1540, un teniente español de la tropa conquistadora del Mariscal 
+        <p class="text-left my-1" data-aos="fade-left">En 1540, un teniente español de la tropa conquistadora del Mariscal 
           Jorge Robledo fue encomendado con la meta de explorar partiendo de la
            ciudad de Arma hacia el norte, los territorios a la vera del río Cauca.
             Esta avanzada exploró una gran extensión del territorio hoy conocido como 
@@ -77,7 +101,7 @@
           Alrededor de 1869 la localidad adquirió la categoría de corregimiento y posteriormente,
            en 1907 la de parroquia. </p>
 
-           <p class="text-left">
+           <p class="text-left" data-aos="fade-left">
           En 1911 se segrega del municipio de Jericó y adquiere la categoría de fracción 
           municipal. Pese a que al distrito se le intentó llamar de otra manera, el denominativo
            de Pueblorrico persistió por generaciones, al parecer como consecuencia de que los primeros
@@ -90,13 +114,16 @@
 
 
 
-    
+    <div class="h-50 my-5" id="efecto">
+      <h1 class="text-center  p-5  text-white display-2"><strong>Sitios De Interes</strong></h1>
+      
+    </div>
 
-      {% comment %} cards body {% endcomment %}
+   {% comment %} cards body {% endcomment %}
 
-            <div class="row container-fluid">
+            <div class="row container-fluid my-5" >
 
-              <h1 class="  text-center my-5 pl-2">Sitios De Interes</h1> 
+             
 
               <div class="card mb-3 col-6 " style="max-width: 540px;">
                 <div class="row g-0">
@@ -105,8 +132,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Templo</h5>
-                      <p class="card-text my-4">El templo religioso san Antonio de padua esta ubicado 
+                      <h5 class="card-title" data-aos="fade-right">Templo</h5>
+                      <p class="card-text my-4" data-aos="fade-right">El templo religioso san Antonio de padua esta ubicado 
                         en el parque principal del municipio,construido hace aproximadamente 58 años</p>
                       
                     </div>
@@ -121,8 +148,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body ml-5">
-                      <h5 class="card-title">Salto De Los Monos</h5>
-                      <p class="card-text ">El Salto De Los Monos: a 15 minutos del 
+                      <h5 class="card-title" data-aos="fade-left">Salto De Los Monos</h5>
+                      <p class="card-text " data-aos="fade-left">El Salto De Los Monos: a 15 minutos del 
                         pueblo sobre la vía pavimentada que conecta con el municipio
                          vecino de Tarso, cerca de la capilla de la vereda El Cedrón, 
                          cuenta con una imponente caída de 80 metros de altura</p>
@@ -144,8 +171,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Sendero El Golgota</h5>
-                      <p class="card-text my-4">El Gólgota, un cerro ubicado cerca a la 
+                      <h5 class="card-title" data-aos="fade-right">Sendero El Golgota</h5>
+                      <p class="card-text my-4" data-aos="fade-right">El Gólgota, un cerro ubicado cerca a la 
                         cabecera municipal y desde el que se puede admirar los municipios
                          aledaños, es uno de los principales referentes turísticos del municipio</p>
                       
@@ -161,8 +188,8 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body ml-5">
-                      <h5 class="card-title">Mural</h5>
-                      <p class="card-text ">El mural de barranquismo fue creado por el artista Pueblorriqueño Willian Pelaez
+                      <h5 class="card-title" data-aos="fade-left">Mural</h5>
+                      <p class="card-text " data-aos="fade-left">El mural de barranquismo fue creado por el artista Pueblorriqueño Willian Pelaez
                         para la celebracion de los 100 años como municipio.Esta ubicado a unas tres cuadras del parque principal</p>
                     </div>
                   </div>

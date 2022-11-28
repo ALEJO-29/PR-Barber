@@ -16,17 +16,116 @@
 
 
 <style>
-.card.front{
-    position:absolute;
-    width:100%;
-    height:100%;
-    backface-visibility:hidden;
-    overflow:hidden;
-    transition:.5s;
-}
-.card.back{
-    
-}
+    .wrapper, .single-card {
+        height: 300px;
+        max-width: 18.5rem;
+       
+    }
+    .wrapper {
+        perspective: 950px;
+    }
+    .single-card {
+        transition: all 1s cubic-bezier(0.2, 0.2, 0.2, 1);
+        transform-style: preserve-3d;
+    }
+    .wrapper:hover .single-card {
+        transform: rotateY(180deg);
+    }
+    .front, .back { 
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: 300px;
+        width: 17rem;
+        border-radius:10px;
+        
+    }
+    .front {
+        cursor: pointer;
+        background-image: url(../static/img/porejah.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+
+    .front1{
+        cursor: pointer;
+        background-image: url(../static/img/pnariz.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+    .front2{
+        cursor: pointer;
+        background-image: url(../static/img/pnariz2.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+
+    .front3{
+        cursor: pointer;
+        background-image: url(../static/img/poreja3.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+    .front4{
+        cursor: pointer;
+        background-image: url(../static/img/plabio1.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+    .front5{
+        cursor: pointer;
+        background-image: url(../static/img/nasal4.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+    .front6{
+        cursor: pointer;
+        background-image: url(../static/img/plabion.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+    .front7{
+        cursor: pointer;
+        background-image: url(../static/img/plabio2.jpg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        border-radius:10px;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        position: absolute; 
+        background: whitesmoke;
+        height: 300px;
+        width: 17rem;
+    }
+        
+
+
 
     
 
@@ -78,81 +177,141 @@
 
     </div>
 
-    <div class="row container-fluid justify-content-around">
+    <div class="row container-fluid justify-content-around text-black">
 
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/porejah.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-               
+       
+     
+
+        <div class="wrapper" data-aos="flip-down">
+         <div class="single-card text-center ">
+            <div class="front position-relative h-100 w-100"></div>
+            <div class="back">
+                <div class="content p-4 ">
+                    <h2 class="c1 my-4">Lóbulo</h2>
+                    
+                    <p>PRECIO: $ 9.000</p>
+                </div>
             </div>
+         </div>
+        </div>
         
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/pnariz.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-                
-            </div>
-
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/pnariz2.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-                
-            </div>
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/poreja3.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-               
-            </div>
         
+
+        <div class="wrapper" data-aos="flip-down">
+            <div class="single-card text-center">
+                <div class="front1 position-relative h-100 w-100"></div>
+                <div class="back">
+                    <div class="content p-4">
+                        <h2 class="c1 my-4">Nostril</h2>
+                    
+                         <p>PRECIO:15.000$</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        
+          
+
+        <div class="wrapper" data-aos="flip-down">
+            <div class="single-card text-center" >
+                <div class="front2 position-relative h-100 w-100"></div>
+                <div class="back">
+                    <div class="content p-4">
+                        <h2 class="c1 my-4">Nostril</h2>
+                    
+                         <p>PRECIO:15.000$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+              
+
+        
+     
+
+        <div class="wrapper" data-aos="flip-down">
+            <div class="single-card text-center " >
+             <div class="front3 position-relative h-100 w-100"></div>
+              <div class="back">
+                <div class="content p-4">
+                    <h2 class="c1 my-4">Industrial</h2>
+                
+                     <p>PRECIO:20.000$</p>
+                </div>
+             </div>
+            </div>
+        </div>
+              
 
     </div>
 
-    <div class="row container-fluid justify-content-around my-3">
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/plabio1.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-               
+    <div class="row container-fluid justify-content-around my-4">
+       
+        <div class="wrapper" data-aos="flip-down">
+            <div class="single-card text-center ">
+               <div class="front4 position-relative h-100 w-100"></div>
+               <div class="back">
+                   <div class="content p-4">
+                       <h2 class="c1 my-4">Labret Lateral</h2>
+                       
+                       <p>PRECIO:$ 10.000</p>
+                   </div>
+               </div>
             </div>
-        
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/nasal4.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-                
-            </div>
+           </div>
            
-
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/plabion.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-                
-            </div>
-        </div>
-
-        <div class="col-md-3 " data-aos="flip-down">
-            <div class="card front" style="width: 18rem;">
-                <img src="{% static 'img/plabio2.jpg' %}" class="card-img-top" alt="..." height="300px" width="200">
-               
-            </div>
-
-            <div class="card back">
-                <h3>nombre:</h3>
-
-                <h5>precio </h5>
-
-            </div>
+           
+   
+           <div class="wrapper" data-aos="flip-down">
+               <div class="single-card text-center ">
+                   <div class="front5 position-relative h-100 w-100"></div>
+                   <div class="back">
+                       <div class="content p-4">
+                           <h2 class="c1 my-4">Setum</h2>
+                       
+                            <p>PRECIO:14.000$</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+   
+           
+             
+   
+           <div class="wrapper" data-aos="flip-down">
+               <div class="single-card text-center " >
+                   <div class="front6 position-relative h-100 w-100"></div>
+                   <div class="back">
+                       <div class="content p-4">
+                           <h2 class="c1 my-4">Labret Vertical</h2>
+                       
+                            <p>PRECIO:15.000$</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+                 
+   
+           
         
-        </div>
+   
+           <div class="wrapper" data-aos="flip-down">
+               <div class="single-card text-center " >
+                <div class="front7 position-relative h-100 w-100"></div>
+                 <div class="back">
+                   <div class="content p-4">
+                       <h2 class="c1 my-4">Snake Bites</h2>
+                   
+                        <p>PRECIO:20.000$</p>
+                   </div>
+                </div>
+               </div>
+           </div>
+
+        
+
+       
 
     </div>
  
