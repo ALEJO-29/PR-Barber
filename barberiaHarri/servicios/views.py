@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from barberApp.models import Servicio, Cita
+from barberApp.models import Cita
 from barberApp.models import Producto
 from .forms import CitaForm
 from django.contrib.auth.models import User
@@ -7,11 +7,6 @@ from datetime import date, timedelta
 from django import forms
 
 # Create your views here.
-
-
-def servicios(request):
-    servicios = Servicio.objects.all()
-    return render(request, 'servicios.html', {'servicios': servicios})
 
 
 def cita(request):
