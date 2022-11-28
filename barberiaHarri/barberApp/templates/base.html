@@ -21,6 +21,11 @@
 </head>
 
 <style>
+    body{
+        box-sizing: border-box;
+        margin: 0;
+    }
+
     .navbar-scrolled{
         background-color: rgba(0,0,0,0.85);
     }
@@ -51,6 +56,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{% url 'nosotros'%}">Mas de nosotros</a>
                 </li>
+                {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'reporte'%}">Reporte</a>
+                    </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link text-white" href="/admin ">Admin</a>
                 </li>
@@ -70,7 +80,7 @@
 </div>
     {% block  content  %} {% endblock  %}
 
-<footer class="p-4 container-fluid bg-dark text-center mt-5 text-white">
+<footer class="p-4 mb-1 container-fluid bg-dark text-center mt-5 text-white">
     <h6>&copy; 2022 Aprendices ADSI Sena</h6> 
 </footer>
 
