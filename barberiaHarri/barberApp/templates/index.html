@@ -16,7 +16,6 @@
         position: absolute; 
         top: 45%; 
         left: 38%; 
-        color: white;
         letter-spacing: 2px;
        } 
        
@@ -31,169 +30,188 @@
 
     }
 
-    .box{
-        position: relative;
-        float: right;
-        width:50%;
-        height: 600px;
-        
-        
+      a{
+      text-decoration: none;
+    }
+  
+     .single-img{
+      height: 300px;
+      overflow: hidden;
+      box-shadow: 5px 5px 20px rgba(0,0,0,0.);
+      transform: translate(0, 0);
+      transition: .3s;
+     }
+
+     .single-img:hover{
+      transform: translate(0, -9px);
     }
 
-    .box p{
-        position: relative;
-        top: 10%;
-    }
+     .img-one{
+      background-image: url(../static/img/Corte.webp);
+      background-size: cover;
+      background-position: center center;
+     }
 
-    .section-2{
-        background-color: rgba(0,0,0,0.60);
-    }
+     .img-two{
+      background-image: url(../static/img/barba.webp);
+      background-size: cover;
+      background-position: center center;
+      }
+
+     .img-three{
+      background-image: url(../static/img/perfora.jpeg);
+      background-size: cover;
+      background-position: center center;
+      }
+
+      .img-four{
+      background-image: url(../static/img/cejas.webp);
+      background-size: cover;
+      background-position: center center;
+      }
+
+     .img-text{
+      background: linear-gradient(to top,rgba(0,0,0,0.90),rgba(255,255,255,0));
+      transform: translate(0, 110px);
+      transition: 0.5s ease;  
+      }
+  
+      .single-img:hover .img-text{
+      transform: translate(0, 0);
+      }
+
+      @media (max-width: 991px){
+      .services{
+          flex-direction: column;
+      }
+
+      .section-2{
+          font-size:8px;
+
+      }
+
+     
+     }
 
     .section-1{
-        background-image: url(../static/img/parallax.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        height: 600px;
-        color: white;
-        
-    }
+    background-image: url(../static/img/parallax.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    
+     }
 
-    #head{
-        background: #ede6db;
-        height: 50px;
-        margin-top:-20px;
-        border-radius: 5px;
-        
-      }
+     #cen{
+    position:relative;
+    top: 40%;
+    letter-spacing: 3px;
 
-      #cen{
-        position: relative; 
-        top: 30%; 
-        letter-spacing: 3px;
-
-      }
-
-      .barber{
-        position: relative;
-        left: 28%;
-        bottom: 40px;
-        background-image: url(../static/img/Harry.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 50%;
-        height: 250px;
-        
-      }
-
-      .fond{
-        position: relative;
-        float: right;
-        background-color: whitesmoke;
-        width: 35%;
-        height: 180px;
-      }
-
-
+     }
 
 
 </style>
 
 
 <div class="zoom">
-    <img src="{% static 'img/R.jpg' %}" class="w-100 d-block" alt="" height="600px" width="100%">
+    <img src="{% static 'img/R.jpg' %}" class="w-100 d-block" alt="" height="600px">
     <div class="caption"> 
-        <h1 class="text-center"><strong>Barbería Harry</strong></h1>
+        <h1 class="text-center text-white"><strong><em>Barbería Harry</em></strong></h1>
     </div>               
 </div>
 
 
-<div class="container-fluid mt-4 p-5" style="display: inline-block;">
-    <div class="row justify-content-around">
-        <h3 class="text-center my-5"><strong> Servicios</strong></h3>
-        <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem;">
-            <div id="head" class="card-header text-center"><h5>Corte de Cabello</h5></div>
-            <div class="card-body">
-              <p class="card-text">Corte de cabello para caballeros que se adaptan a tu gusto, excelente asesoria y lo ultimo en tendencia de cortes</p>
-            </div>
+<div class="container-fluid p-5 mt-5 text-white text-center">
+  <div class="row">
+    <h2 class="text-center text-black mb-5"><strong><em>Nuestros Servicios</em></strong></h2>
+      <div class="services d-flex justify-content-between">
+          <div id="cut" class="single-img img-one mx-2 mt-2 d-flex flex-nowrap flex-column-reverse rounded-2">
+              <div class="img-text">
+                  <h4 class="m-5">Corte de Cabello</h4>
+                  <p>Corte de cabello para caballeros que se adaptan a tu gusto, excelente asesoria con lo ultimo en tendencia de cortes</p>
+              </div>
           </div>
-          
-        <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem;">
-            <div id="head" class="card-header text-center"><h5>Barba</h5></div>
-            <div class="card-body">
-              <p class="card-text">Servicio especializado en cuidado, corte y perfilación de barba adecuando diseño y forma al rostro del cliente</p>
-            </div>
+     
+          <div id="cut" class="single-img img-two mx-2 mt-2 d-flex flex-nowrap flex-column-reverse rounded-2"> 
+              <div class="img-text">
+                  <h4 class="m-4">Barba</h4>
+                  <p>Servicio especializado en cuidado, corte y perfilación de barba adecuando diseño y forma al rostro del cliente</p>
+                  
+              </div>
           </div>
-
-          <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem;">
-            <div id="head" class="card-header text-center"><h5>Perforaciones</h5></div>
-            <div class="card-body">
-              <p class="card-text">Servicio de perforación en orejas, labios, cejas, lengua. Con la mejor experiencia brindada por un profesional</p>
-            </div>
-          </div>
-
-          <div id="cut" class="card border-light col-md-3 mt-4" style="max-width: 18rem; ">
-            <div id="head" class="card-header text-center"><h5>Cejas</h5></div>
-            <div class="card-body">
-              <p class="card-text">Diseño y depilación de cejas dando la forma apropiada de tus ojos y rostro con el grosor y linea natural de tus cejas</p>
-            </div>
+    
+     
+          <div id="cut" class="single-img img-three mx-2 mt-2 d-flex flex-nowrap flex-column-reverse rounded-2">
+              <div class="img-text">
+                  <h4 class="m-4">Perforación</h4>
+                  <p>Servicio de perforación en orejas, labios, cejas, lengua. Con la mejor experiencia brindada por un profesional</p>
+                  
+              </div>
           </div>
 
-       
-    </div>
-</div>
-
-<div class="container-fluid p-4 mt-4"> 
-    <div class="row">
-        <div class="col-sm-4 w-100">
-            <div class="section-1"> 
-                <div class="section-2 box p-5"> 
-                    <h3 class="text-center"><strong>Bienvenido</strong></h3>
-                    <p class="text-left">En Barbería Harry reflejamos lo que tu quieres ser hoy, 
-                        somos un espacio moderno, ofrecemos a nuestros clientes una imagen actual y el estilo que mejor refleja 
-                        su personalidad, un espacio donde el cliente que nos visita vive una experiencia de bienestar, 
-                        todo esto con técnicas y tratamientos profesionales realzando el estilo personal del cliente.
-                    </p>
-
-                    <p class="text-left">
-                        Asesoramos tus ideas, las adaptamos a tus gustos y preferencias dejando plasmado el estilo y esencia de
-                        nuestra barbería.
-                    </p>
-                       
-
-                    <p class="text-left">
-                        Enfocados en prestar servicios de alta calidad creando experiencias placenteras, la profesionalidad,
-                        cortesía y gratitud con cada uno de nuestros clientes son nuestras principales virtudes.
-                    </p>
-                       
-                   
-                </div>
-                <h1  id="cen" class="text-center"><strong>Nuestra Barbería</strong></h1>
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="container-fluid p-4">
-    <div class="row justify-content-end">
-    <div class="text-center"><h2>Nuestro Barbero</h2></div>
-      <div class="texto col-md-8 text-left my-5 mx-5 mt-5">
-        <p>En las manos de nuestro profesional en barberia vas poder lograr lucir tu mejor estilo</p>
+          <div id="cut" class="single-img img-four mx-2 mt-2 d-flex flex-nowrap flex-column-reverse rounded-2">
+              <div class="img-text">
+                  <h4 class="m-4">Cejas</h4>
+                  <p>Servicio de perforación en orejas, labios, cejas, lengua. Con la mejor experiencia brindada por un profesional</p>
+                  
+              </div>
+          </div>
+     
+     
       </div>
-
-      <div id="cut" class="card col-md-4" style="width: 19rem; height: 25rem; background: white">
-          <img src="{% static 'img/Harry.jpeg' %}" class="card-img-top " style="border-radius: 100%; height: 200px; width: 200px; margin: 0 auto;" alt="...">
-        <div class="card-body text-center"><h3>Harriman Barber</h3>
-          <p class="card-text p-3">Barbero profesional con más de 8 años de experiencia en cortes de cabello, perfilación de barba y cejas</p>
-        </div>
-        
-      </div> 
-      
-    </div>
+ 
   </div>
+</div>
+
+<div class="container-fluid p-4"> 
+  <div class="section-1 w-100 text-white"> 
+      <div class="section-2 p-5 float-end h-100 w-50" style="background-color: rgba(0,0,0,0.60)"> 
+              <h3 class="text-center"><strong>Bienvenido</strong></h3>
+              <p class="text-left mt-5">En Barbería Harry reflejamos lo que tu quieres ser hoy, 
+              somos un espacio moderno, ofrecemos a nuestros clientes una imagen actual y el estilo que mejor refleja 
+              su personalidad, un espacio donde el cliente que nos visita vive una experiencia de bienestar, 
+              todo esto con técnicas y tratamientos profesionales realzando el estilo personal del cliente.
+
+              <p class="text-left mt-4">
+              Asesoramos tus ideas, las adaptamos a tus gustos y preferencias dejando plasmado el estilo y esencia de
+              nuestra barbería.
+              </p>
+
+              <p class="text-left mt-4">
+              Enfocados en prestar servicios de alta calidad creando experiencias placenteras, la profesionalidad,
+              cortesía y gratitud con cada uno de nuestros clientes son nuestras principales virtudes.
+              </p>
+                         
+              </p>
+
+      </div>
+      <h1  id="cen" class="text-center"><strong>Nuestra Barbería</strong></h1>
+
+  </div>
+</div>
+
+
+<div class="container-fluid p-4 mb-3">
+
+  <div class="row mt-3">
+
+    <div id="cut" class="card col-sm-8 mx-auto" data-aos="fade-right" style="width: 25rem; height: 25rem; background: whitesmoke">
+         <img src="{% static 'img/Harry.jpeg' %}" class="card-img-top " style="border-radius: 100%; height: 200px; width: 200px; margin: 0 auto;" alt="...">
+      <div class="card-body text-center"><h3><em>Harriman Barber</em></h3>
+        <p class="card-text p-3">Barbero profesional con más de 8 años de experiencia en cortes de cabello, perfilación de barba y cejas</p>
+      </div>
+  
+    </div> 
+  
+        <div class="text-left col-sm-4 mx-auto" data-aos="fade-left" style="font-size: 20px;">
+            <h1><em>Con Nuestro Barbero<em></h1>
+          <p>Podrás personalizar tu estilo, desde un corte de cabello hasta una perforación que acompañe 
+            tu esencia y refleje ese estilo que te hace unico. Tendrás la orientación de un experto, una experiencia satisfactoria y un servicio 
+            extraordinario de la mano de un profecional y apasionado por su trabajo
+          </p>
+          <p><em>"La Barbería Harry es pasión, moda y estilo para nuestros clientes"</em></p>
+        </div> 
+  </div>
+</div>
 
 
 
