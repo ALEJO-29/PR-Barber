@@ -17,6 +17,14 @@
     color: white;
     
     }
+
+    .img{
+        transition: all 500ms ease-out;
+    }
+
+    .img:hover{
+        transform: scale(1.1);
+    }
 </style>
 
 
@@ -57,11 +65,12 @@
             </p>
 
         </div>
+        
         <div class="col-md-8 my-5">
             
-            <img src="{% static 'img/event.jpg' %}" id="cut" class="rounded mb-5" alt="" height="260px" width="256px">
-            <img src="{% static 'img/evento2.jpg' %}" id="cut" class="rounded mt-3" alt=""  height="260px" width="256px">
-            <img src="{% static 'img/evento3.jpg' %}" id="cut" class="rounded mt-5 " alt=""  height="260px" width="256px">
+            <img src="{% static 'img/event.jpg' %}" id="cut" class="img rounded mb-5" alt="" height="260px" width="256px">
+            <img src="{% static 'img/evento2.jpg' %}" id="cut" class="img rounded mt-3" alt=""  height="260px" width="256px">
+            <img src="{% static 'img/evento3.jpg' %}" id="cut" class="img rounded mt-5 " alt=""  height="260px" width="256px">
 
             
         </div>
