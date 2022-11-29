@@ -13,10 +13,6 @@
 
 <style>
 
-    body{
-      background-color: black;
-      margin-top: 100px;
-    }
     .box p{
         position: relative;
         top: 10%;
@@ -53,32 +49,36 @@
 
 </style>
 
-<div class="container-fluid p-4 mt-4 w-100 d-block">
+<div class="container-fluid w-100 d-block">
   <div class="row">
       <div class="col-sm-4 w-100">
           <div class="section-1">
-              <div class="section-2 box p-5">
-                  <h3 class="text-center"><strong>TENEMOS LOS MEJORES PRODUCTOS PARA TI</strong></h3>
+              <div class="section-2 box  mt-5 ">
+                  <h3 class="text-center "><strong>TENEMOS LOS MEJORES PRODUCTOS PARA TI</strong></h3>
                   <h6 class="text-center">En la <strong>Barbería Harry</strong> pensamos siempre en nuestros clientes, por eso tenemos los mejores productos para el cuidado de tu cabello o barba</h6>
           </div>
       </div>
   </div>
-  <div class="container m-5">
+  <div class="container m-5 fst-italic">
     <h4 class="text-white text-center">PRODUCTOS DISPONIBLES</h4>
+    <div class="w-25" style="float: right;">
+      {% include 'carrito.html' %}
+    </div>
     <div class="row">
-        {% for productos in producto %}
-        <div class="card m-3 bg-secondary rounded-3" style="width: 18rem;">
-         <img class="img-producto" height="200" src="{{ productos.imagen.url }}" class="card-img-top rounded " alt="{{ productos.nombre }}" />
-        <div class="card-body">
-          <h5 class="card-title">{{ productos.nombre }}</h5>
-          <p class="card-text">{{ productos.descripcion }}</p>
-          <a href="#" class="btn bg-info">Comprar</a>
+      {% for x in producto %}
+        <div class="card mx-3 shadow"  style="width: 18rem;">
+          <img src="{{x.imagen.url}}" alt="" class="img-top" height="200px">
+          <div class="card-body text-center">
+            <h4> {{x.nombre}} </h4>
+            <p>{{x.descripcion}} </p>
+            <p>${{x.precio}} </p>
+            <a href="{% url 'Add' x.id %}" class="btn btn-success">Agregar al carrito</a>
+          </div>
         </div>
-      </div>
         {% endfor %}
+      </div>
   </div>
 </div>
-  
 </div>
 
 {% endblock %}
