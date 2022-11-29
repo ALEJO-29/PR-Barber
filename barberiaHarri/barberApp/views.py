@@ -8,6 +8,8 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from openpyxl import Workbook
 from django.views.generic import TemplateView
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 
 
 # Create your views here.
@@ -62,3 +64,21 @@ class reporte_excel(TemplateView):
         
         wb.save(response)
         return response
+
+
+def pdf(request):
+    today = datetime.now()
+    query = Cita.objects.filter(fecha=today.date())
+    template_path= "pdf.html"
+    context= {'query': query}
+    
+    response= HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="reporte.pdf"'
+    
+    template= get_template(template_path)
+    html= template.render(context)
+    
+    pisa_status= pisa.CreatePDF(html, dest=response)
+    if pisa_status.err:
+        return HttpResponse('EXISTE UN ERROR <pre>'+ html+'</pre>')
+    return response

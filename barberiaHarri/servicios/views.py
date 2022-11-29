@@ -5,7 +5,6 @@ from .forms import CitaForm
 from django.contrib.auth.models import User
 from datetime import date, timedelta
 from django import forms
-
 # Create your views here.
 
 

@@ -14,7 +14,7 @@
     }
 </style>
 
-<div class="container-fluid text-white" style="margin-top:140px">
+<div class="container-fluid text-white" style="margin-top:140px; height: 270px;">
     <div class="row">
         <div class="col-sm-6 ">
             <h5 class="text-center text-uppercase">horarios ocupados durante los siguientes 4 dias</h5>
@@ -38,6 +38,7 @@
         <div class="col-sm-6">
             <h5 class="d-inline mx-5">Descarga el reporte de citas para hoy</h5>
             <a href=" {% url 'reporteExcel' %}"  class="btn btn-danger " >Reporte de citas hoy </a>
+            {% comment %} <a href="{% url 'pdf' %} ">pdf xd</a> {% endcomment %}
             {% for x in cita %}
                 {{x.fecha}}
             {% endfor %}
