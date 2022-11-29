@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('reporte/', views.reporte, name="reporte"),
     path('reporteExcel/', views.reporte_excel.as_view(), name="reporteExcel"),
+    # path('pdf/', views.pdf, name="pdf"),
 ]

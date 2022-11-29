@@ -51,8 +51,3 @@ class Cita(models.Model):
     tipo_corte = models.CharField(
         max_length=250, choices=tipo_corte, default=True)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-
-
-
-    
-    
