@@ -1,12 +1,33 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
 {% load static  %}
 {% load bootstrap5 %}
 
 {% bootstrap_javascript %}
 {% bootstrap_css %}
 
-{% block title %} Inicio {% endblock  %}
+{% block title %} reporte{% endblock  %}
 {% block content %}
-<h1>reporte</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>FECHA</th>
+                <th>HORA</th>
+                <th>TIPO  DE CORTE</th>
+                <th>NOMBRE</th>
+                <th>TELEFONO</th>
+            </tr>
+        </thead>
+        <TBody>
+            <tr>
+                {% for x in query %}
+                <th>{{x.fecha}} </th>
+                <th>{{x.hora}} </th>
+                <th>{{x.tipo_corte}} </th>
+                <th>{{x.usuario.nombre}} </th>
+                <th>{{x.usuario.telefono}} </th>
+                {% endfor %}
+            </tr>
+        </TBody>
+    </table>
 {% endblock content %}
 
