@@ -12,23 +12,16 @@
 {% block content %}
 
 <style>
-
-    .box p{
-        position: relative;
-        top: 10%;
-    }
-
-    .section-2{
-        background-color: rgba(0,0,0,0.60);
-    }
-
     .section-1{
         background-image: url(../static/img/BANER.jpg);
-        background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        height: 400px;
-        color: white;
+        height: 400px;  
+    }
+
+    .titulo{
+      position: relative;
+      top: 45%;
     }
 
     .col-sm-4{
@@ -49,24 +42,26 @@
 
 </style>
 
-<div class="container-fluid w-100 d-block">
-  <div class="row">
-      <div class="col-sm-4 w-100">
-          <div class="section-1">
-              <div class="section-2 box  mt-5 ">
-                  <h3 class="text-center "><strong>TENEMOS LOS MEJORES PRODUCTOS PARA TI</strong></h3>
-                  <h6 class="text-center">En la <strong>Barbería Harry</strong> pensamos siempre en nuestros clientes, por eso tenemos los mejores productos para el cuidado de tu cabello o barba</h6>
-          </div>
-      </div>
+
+  <div class="section-1 text-white">
+            <div class="h-100" style="background-color: rgba(0,0,0,0.60)"> 
+                  <h3 class="titulo text-center"><strong>TENEMOS LOS MEJORES PRODUCTOS PARA TI</strong></h3>
+                  <h5 class="titulo text-center p-2">En la Barbería Harry pensamos siempre en nuestros clientes, <br>por eso tenemos los mejores productos para el cuidado de tu cabello o barba</h5>
+            </div>
+      
   </div>
-  <div class="container m-5 fst-italic">
-    <h4 class="text-white text-center">PRODUCTOS DISPONIBLES</h4>
+
+
+
+
+  <div class="container my-5 fst-italic">
+    <h4 class="text-center my-5"><strong>PRODUCTOS DISPONIBLES</strong></h4>
     <div class="w-25" style="float: right;">
       {% include 'carrito.html' %}
     </div>
     <div class="row">
       {% for x in producto %}
-        <div class="card mx-3 shadow"  style="width: 18rem;">
+        <div class="card mx-2 shadow" style="width: 16rem; background: whitesmoke">
           <img src="{{x.imagen.url}}" alt="" class="img-top" height="200px">
           <div class="card-body text-center">
             <h4> {{x.nombre}} </h4>
